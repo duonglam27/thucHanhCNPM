@@ -1,4 +1,4 @@
-from flask import render_template
+from flask import render_template, request
 import dao
 from app import app
 
@@ -6,8 +6,10 @@ from app import app
 @app.route("/")
 def index():
     cates=dao.load_categories()
-    prods=dao.load_product()
-    return render_template('index.html', categories=cates, product=prods)
+
+    kw=request.args.get('kw')
+    prods=dao.load_products(kw)
+    return render_template('index.html', categories=cates, products=prods)
 
 if __name__=='__main__':
     app.run(debug=True)

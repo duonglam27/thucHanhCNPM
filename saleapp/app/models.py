@@ -34,6 +34,7 @@ if __name__ == '__main__':
         # db.session.add_all([c1, c2, c3])
         # db.session.commit()
         data = [{
+
             "id": 1,
             "name": "iPhone 7 Plus",
             "description": "Apple, 32GB, RAM: 3GB, iOS13",
@@ -52,7 +53,7 @@ if __name__ == '__main__':
             "name": "IPhone 15",
             "description": "Apple, 64GB, RAML: 6GB",
             "price": 24000000,
-            "image": "https://product.hstatic.net/1000063620/product/ip-19e6fb19.jpg",
+            "image": "https://product.hstatic.net/1000063620/product/ip-15-pro-max-mhm-xanh_8dc67ad091eb477099276543f9e6fb19.jpg",
             "category_id": 1
         }, {
             "id": 4,
@@ -66,16 +67,45 @@ if __name__ == '__main__':
             "name": "MacBook M1",
             "description": "Apple, 64GB, RAML: 6GB",
             "price": 24000000,
-            "image": "https://i0.wp.com/vuatao.vn/wp-content/uploads/2021/06/macbook-air-m1-2020-8-core-gpu-silver-thumb-650x650-1.png?fit=650%2C650&ssl=1",
+            "image": "https://hieuapple.com/uploads/shops/2021_04/macbook-pro-mpxq2.3.jpg",
             "category_id": 3
         }, {
             "id": 6,
             "name": "MacBook M3",
             "description": "Apple, 64GB, RAML: 6GB",
             "price": 24000000,
-            "image": "https://bizweb.dktcdn.net/thumb/1024x1024",
+            "image": "https://macone.vn/wp-content/uploads/2023/11/mbp14-m3-max-pro-spaceblack-gallery2-202310-lon-1024x787.jpeg",
+            "category_id": 3
+        }, {
+            "id": 7,
+            "name": "SamSung S21",
+            "description": "Apple, 64GB, RAML: 6GB",
+            "price": 24000000,
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRbGswIwdezd6Y6Z1lmNgIys0bAuiipSBnjNA&s",
+            "category_id": 1
+        }, {
+            "id": 8,
+            "name": "SamSung S25",
+            "description": "Apple, 64GB, RAML: 6GB",
+            "price": 24000000,
+            "image": "https://didongmoi.com.vn/upload/images/product/samsung-galaxy-s25-ultra-gia-re-3-2.jpg",
+            "category_id": 1
+        }, {
+            "id": 9,
+            "name": "Lenovo ThinkPad X1 ",
+            "description": "Apple, 64GB, RAML: 6GB",
+            "price": 24000000,
+            "image": "https://product.hstatic.net/1000331874/product/thinkpad_x1_nano_gen_1_31b3ed9664994178a888eadd06c0b029.jpg",
+            "category_id": 3
+        }, {
+            "id": 10,
+            "name": "Dell XPS",
+            "description": "Apple, 64GB, RAML: 6GB",
+            "price": 24000000,
+            "image": "https://thegioiso365.vn/wp-content/uploads/2021/01/dell-xps-13-9380-4-1602066716.jpg",
             "category_id": 3
         }]
+
         for p in data:
             prod = Product(name=p['name'], description=p['description'], price=p['price'], image=p['image']
                            , category_id=p['category_id'])
