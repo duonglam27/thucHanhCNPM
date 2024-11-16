@@ -17,7 +17,7 @@
 </ul>
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="javascript:void(0)">LK airLine</a>
+        <a class="navbar-brand" href="/">LK airLine</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -25,12 +25,14 @@
             <ul class="navbar-nav me-auto">
                 {% for c in categories %}
                 <li class="nav-item">
-                    <a class="nav-link" href="javascript:void(0)">{{c.name}}</a>
+                    <a class="nav-link "  href="/?category_id={{c.id}}">{{c.name}}</a>
                 </li>
                 {% endfor %}
+
             </ul>
             <form method="get" action="/" class="d-flex">
-                <input class="form-control me-2" type="text" placeholder="Search" name="kw"> <!--name lay ten bien truyen len controler  -->
+                <input class="form-control me-2" type="text" placeholder="Search" name="kw">
+                <!--name lay ten bien truyen len controler  -->
                 <button class="btn btn-primary" type="submit">Search</button>
             </form>
         </div>
@@ -38,6 +40,12 @@
 </nav>
 <!--chia lưới hiển thị -->
 <section class="container">  <!-- class="container" căn khung vào giữa-->
+    <section>
+        <ul class="pagination mt-1" >
+            <li class="page-item"><a class="page-link" href="/?page=1">1</a></li>
+            <li class="page-item"><a class="page-link" href="/?page=2">2</a></li>
+        </ul>
+    </section>
     <div class="row">
         {% for p in products %}
         <div class="col-md-2 col-12 p-2"> <!-- 4 ô 1 hàng, padding -2-->
