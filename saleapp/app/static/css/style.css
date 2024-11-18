@@ -1,4 +1,18 @@
-.card-img-top{
-    height=400px;
-    width=200px;
+html, body {
+            height: 100%;  /* Đảm bảo chiều cao của body và html là 100% */
+            margin: 0;      /* Loại bỏ margin mặc định */
+            display: flex;
+            flex-direction: column; /* Sắp xếp các phần tử theo chiều dọc */
+        }
+
+        main {
+            flex: 1;  /* Chắc chắn rằng phần content chiếm không gian còn lại */
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
 }

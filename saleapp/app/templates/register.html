@@ -1,0 +1,27 @@
+{% extends 'layout/base.html' %}
+{% block content %}
+<h1 class="text-center text-success mt-1">Đăng ký người dùng</h1>
+<div class="form-floating">
+    <input type="text" class="form-control" id="name" placeholder="Nhập họ tên" name="name">
+      <label for="name"> Họ tên </label>
+</div>
+<div class="form-floating mt-1">
+    <input type="text" class="form-control" id="username" name="username" placeholder=" Nhập username"></input>
+    <label for="username">Tên đăng nhập</label>
+</div>
+<div class="form-floating mt-1">
+    <input type="text" class="form-control" id="password" name="password" placeholder=" Nhập password"></input>
+    <label for="password">Mật khẩu</label>
+</div>
+<div class="form-floating mt-1">
+    <input type="text" class="form-control" id="confirm" name="confirm" placeholder=" confirm password"></input>
+    <label for="confirm">Xác nhận mật khẩu</label>
+</div>
+<div class="form-floating mt-1">
+    <input type="file" class="form-control" id="avatar" name="avatar" placeholder=" Thêm ảnh đại diện"></input>
+    <label for="avatar">Ảnh đại diện</label>
+</div>
+<div class="form-floating mt-1">
+    <button type="submit" class="btn btn-success">Đăng ký</button>
+</div>
+{% endblock%}
